@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -9,6 +10,7 @@ import Track from './pages/Track';
 import FAQ from './pages/FAQ';
 import Calculator from './pages/Calculator';
 import Partners from './pages/Partners';
+import DeveloperHub from './pages/DeveloperHub';
 import { LoanApplication } from './types';
 
 const App: React.FC = () => {
@@ -39,6 +41,7 @@ const App: React.FC = () => {
             <Route path="/apply" element={<Apply onApply={addLoan} />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/calculator" element={<Calculator />} />
+            <Route path="/developers" element={<DeveloperHub />} />
             <Route path="/partners" element={<Partners />} />
             <Route path="/track" element={<Track loans={loans} />} />
             <Route path="/admin" element={<Admin loans={loans} onUpdate={updateLoan} />} />
